@@ -56,7 +56,7 @@
         }
         .search-button {
             height: 100%;
-            width: 6%;
+            width: 60px;
             border-radius: 0 18px 18px 0 / 50%;
             border: none;
             cursor: pointer;
@@ -68,6 +68,7 @@
         .search-button:hover {
             background-color: rgb(255, 123, 0);
             transition: background-color 0.2s ease, transform 0.3s ease;
+            cursor: pointer;
         }
         .magnify {
             display: flex;
@@ -137,6 +138,7 @@
             align-items: center;
             justify-content: center;
         }
+        
 
         .categories:hover {
             background-color: #d4d4d4;
@@ -166,6 +168,38 @@
             transition: background-color 0.2s ease, transform 0.3s ease;
             cursor: pointer;
         }
+
+        .dropdown-menu {
+            background-color: white;
+            border: 1px solid rgb(234, 234, 234);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column; 
+            position: absolute;
+            padding: 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            color: #333;
+            margin-top: 550px;
+            margin-left: 150px;
+            border-radius: 20px 20px 20px 20px;
+            width: 300px;
+        }
+
+        .menu-item {
+            text-decoration: none;
+            padding: 10px;
+            white-space: nowrap;
+            color: #333;
+            
+        }
+
+        .menu-item:hover {
+            background-color: rgb(202, 221, 238);
+            transition: background-color 0.2s ease, transform 0.3s ease;
+            cursor: pointer;
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -176,9 +210,23 @@
                 <h1 class="logo">
                     Etsy
                 </h1>
-                <div class="categories" style="display: flex; margin-right: 65px;">
+                <div class="categories" style="display: flex; margin-right: 65px;" onclick="toggleDropdown()">
                     <img src="assets/hamburger.svg"  width="20" height="20" style="padding-right: 7px;">
                     Categories
+                </div>
+                <div class="dropdown-menu">
+                    <a class="menu-item" href="#">Accessories</a>
+                    <a class="menu-item" href="#">Art & Collectibles</a>
+                    <a class="menu-item" href="#">Baby</a>
+                    <a class="menu-item" href="#">Bags & Purses</a>
+                    <a class="menu-item" href="#">Bath & Beauty</a>
+                    <a class="menu-item" href="#">Books, Movies & Music</a>
+                    <a class="menu-item" href="#">Clothing</a>
+                    <a class="menu-item" href="#">Craft Supplies & Tools</a>
+                    <a class="menu-item" href="#">Electronics & Accessories</a>
+                    <a class="menu-item" href="#">Gifts</a>
+                    <a class="menu-item" href="#">Home & Living</a>
+                    <a class="menu-item" href="#">Jewelry</a>
                 </div>
             </div>
             <div class="search-bar">
@@ -192,7 +240,7 @@
                 </button>
             </div>
             <div class="top-right">
-                <button class="reg-button" style="width: auto; margin-left: 45px;">
+                <button class="reg-button" style="width: auto; margin-left: 45px; font-size: small;">
                     Sign in
                 </button>
                 <button class="blue-button">
@@ -227,5 +275,24 @@
 
     </div>
     <h1>Products</h1>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.querySelector('.dropdown-menu');
+            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                dropdown.style.display = 'flex';
+            } else {
+                dropdown.style.display = 'none';
+            }
+        }
+
+        const dropdown = document.querySelector('.dropdown-menu');
+        const categoriesButton = document.querySelector('.categories');
+        document.addEventListener('click', function(event) {
+            if (!categoriesButton.contains(event.target) && !dropdown.contains(event.target)) {
+                dropdown.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
