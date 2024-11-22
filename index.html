@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etsy - Shop for handmade, vintage, custom, and unique gifts for everyone</title>
+    <style>
+        body {
+            /* font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; */
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .navbar {
+            margin-top: 10px;
+            height: 100px;
+            width: 100vw;
+            border-bottom: 2px solid #d4d4d4;
+        }
+        .nav-top-half {
+            height: 50px;
+            width: 100vw;
+            gap: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-bottom-half {
+            height: 50px;
+            width: 100vw;
+            gap: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .search-bar {
+            height: 100%;
+            width: 65%;
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 20px / 50%;
+            display: flex;
+            align-items: center;
+
+        }
+        .search-input {
+            margin-left: 20px;
+            width: 92%;
+            border: none;
+            outline: none;
+        }
+        .search-button {
+            height: 100%;
+            width: 6%;
+            border-radius: 0 18px 18px 0 / 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+        .search-button:hover {
+            background-color: rgb(255, 123, 0);
+            transition: background-color 0.2s ease, transform 0.3s ease;
+        }
+        .magnify {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90%;
+            width: 110%;
+            border-radius: 80%;
+            background-color: rgb(255, 123, 0);
+        }
+
+        .reg-button {
+            border: none;
+            outline: none;
+            border-radius: 20px / 50%;
+            height: 40px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            white-space: nowrap;
+            /* width: 100px; */
+        }
+
+        .reg-button:hover {
+            background-color: #d4d4d4;
+            transition: background-color 0.2s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .top-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            /* background-color: black; */
+        }
+
+
+        .top-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            /* background-color: black; */
+        }
+
+        .logo {
+            color: rgb(255, 123, 0);
+            padding-right: 15px;
+            cursor: pointer;
+            /* wid */
+            /* padding-right: 50px; */
+        }
+
+        .categories {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 20px / 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .categories:hover {
+            background-color: #d4d4d4;
+            transition: background-color 0.2s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .blue-button {
+            border: none;
+            outline: none;
+            border-radius: 20px / 50%;
+            height: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            white-space: nowrap;
+            
+        }
+
+        .blue-button:hover {
+            background-color: rgb(202, 221, 238);
+            transition: background-color 0.2s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="nav-top-half">
+            <div class = "top-left">
+                <h1 class="logo">
+                    Etsy
+                </h1>
+                <div class="categories" style="display: flex; margin-right: 65px;">
+                    <img src="assets/hamburger.svg"  width="20" height="20" style="padding-right: 7px;">
+                    Categories
+                </div>
+            </div>
+            <div class="search-bar">
+                <input class="search-input" placeholder="Search for anything">
+
+                </input>
+                <button class="search-button">
+                    <div class="magnify"> 
+                        <img src="assets/magnify.svg"  width="30" height="30">
+                    </div>
+                </button>
+            </div>
+            <div class="top-right">
+                <button class="reg-button" style="width: auto; margin-left: 45px;">
+                    Sign in
+                </button>
+                <button class="blue-button">
+                    <img src="assets/gift-box.svg"  width="25" height="25" >
+                </button>
+                <button class="blue-button">
+                    <img src="assets/shopping-cart.svg"  width="25" height="25" >
+                </button>
+            </div>
+        </div>
+        <div class="nav-bottom-half">
+            <button class="reg-button">
+                <img src="assets/gift-box.svg"  width="20" height="20" style="padding-right: 7px;">
+                Gifts
+            </button>
+            <button class="reg-button">
+                Cyber Deals
+            </button>
+            <button class="reg-button">
+                Home Favorites
+            </button>
+            <button class="reg-button">
+                Fashion Finds
+            </button>
+            <button class="reg-button">
+                Registry
+            </button>
+            <button class="reg-button">
+                Gift Cards
+            </button>
+        </div>
+
+    </div>
+    <h1>Products</h1>
+</body>
+</html>
