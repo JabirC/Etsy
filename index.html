@@ -200,6 +200,73 @@
             cursor: pointer;
             text-decoration: underline;
         }
+
+        .products {
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .product-title {
+            padding-top: 10%;
+            margin-left: 10%;
+            margin-right: 10%;
+            font-size: x-large;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        .product-list {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .product-item {
+            height: 350px;
+            width: 250px;
+            /* background-color: yellow; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px 15px 15px 15px;
+        }
+
+        .product-item:hover {
+            cursor: pointer;
+            border: 1px solid rgb(229, 229, 229);
+            transition: background-color 0.5s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .product-image {
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .product-name {
+            width: 90%;
+            white-space: nowrap;        
+            overflow: hidden;          
+            text-overflow: ellipsis;
+        }
+
+        .product-price {
+            width: 90%;
+            white-space: nowrap;        
+            overflow: hidden;          
+            text-overflow: ellipsis;
+        }
+
+        .product-review {
+            width: 90%;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -274,7 +341,61 @@
         </div>
 
     </div>
-    <h1>Products</h1>
+    <div class="products">
+        <div class="product-title">
+            Amazing deals, updated daily
+        </div>
+        <div class="product-list">
+            <div class="product-item">
+                <img class="product-image" src="assets/product1.webp" alt="Description" width="90%" height="60%">
+                <p class="product-name">
+                    Liquid Foundation • Botanical Blend • Natural Protection •
+                </p>
+                <div class="product-price">
+                    $6.00+ <strike>$8.00+</strike>
+                </div>
+                <div class="product-review">
+                    4.9 &#9733; (26,789)
+                </div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="assets/product2.webp" alt="Description" width="90%" height="60%">
+                <p class="product-name">
+                    Slim Leather Card Holder, Personalized Wallet, Minimalist Front Pocket wallet, Handmade Small ID Card Wallet, Anniversary Gift For Him Men
+                </p>
+                <div class="product-price">
+                    $19.96+ <strike>$49.89+</strike>
+                </div>
+                <div class="product-review">
+                    4.7 &#9733; (10,815)
+                </div>
+            </div>
+            <div class="product-item"> 
+                <img class="product-image" src="assets/product3.webp" alt="Description" width="90%" height="60%">
+                <p class="product-name">
+                    3 Pack Silicone Bottle Labels, Baby Bottle Label, Sippy Cup Label, Personalized Labels, Daycare Labels, Stocking Stuffer, Holiday Gift
+                </p>
+                <div class="product-price">
+                    $17.24 <strike>$22.99</strike>
+                </div>
+                <div class="product-review">
+                    4.9 &#9733; (7,486)
+                </div>
+            </div>
+            <div class="product-item">
+                <img class="product-image" src="assets/product4.webp" alt="Description" width="90%" height="60%">
+                <p class="product-name">
+                    Personalized 80-Piece Deluxe Art Set w/Wood Carrying Case - Arts & Crafts - Engraved Designs - For Kids - Choose From 8 Designs
+                </p>
+                <div class="product-price">
+                    $37.49 <strike>$49.99</strike>
+                </div>
+                <div class="product-review">
+                    5.0 &#9733; (549)
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function toggleDropdown() {
